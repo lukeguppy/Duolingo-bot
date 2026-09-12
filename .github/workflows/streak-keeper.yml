@@ -2,9 +2,9 @@ name: Streak keeper
 
 on:
   schedule:
-    - cron: '0 23 * * *'
+    - cron: '0 22,23 * * *'
       timezone: Europe/London
-    - cron: '45 23 * * *'
+    - cron: '30 22,23 * * *'
       timezone: Europe/London
   push:
     branches:
