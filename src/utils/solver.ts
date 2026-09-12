@@ -49,6 +49,8 @@ export async function solveVisibleTokens(page: Page, sessionData: Session): Prom
 
 export async function solveMatchChallenge(page: Page, sessionData: Session): Promise<number> {
     let solved = 0;
+    let idleRounds = 0;
+
     while (['match', 'extendedMatch'].includes(await getChallengeType(page))) {
         const visibleTokens = await getVisibleTokens(page);
         if (visibleTokens.length === 0) break;
@@ -63,9 +65,13 @@ export async function solveMatchChallenge(page: Page, sessionData: Session): Pro
             for (const pair of challenge.pairs) {
                 const normFrom = normalize(pair.fromToken);
                 const normLearning = normalize(pair.learningToken);
-                const hasFrom = visibleTokens.some(vt => normalize(vt.cleanInnerText) === normFrom || normalize(vt.text) === normFrom);
-                const hasLearning = visibleTokens.some(vt => normalize(vt.cleanInnerText) === normLearning || normalize(vt.text) === normLearning);
-                if (hasFrom && hasLearning) matches++;
+                const fromTokens = visibleTokens.filter(vt => normalize(vt.cleanInnerText) === normFrom || normalize(vt.text) === normFrom);
+                const learningTokens = visibleTokens.filter(vt => normalize(vt.cleanInnerText) === normLearning || normalize(vt.text) === normLearning);
+                // Cognates (e.g. ballet/ballet) need two distinct tiles
+                const hasPair = normFrom === normLearning
+                    ? fromTokens.length >= 2
+                    : fromTokens.length > 0 && learningTokens.length > 0;
+                if (hasPair) matches++;
             }
             if (matches > maxMatches) {
                 maxMatches = matches;
@@ -79,24 +85,47 @@ export async function solveMatchChallenge(page: Page, sessionData: Session): Pro
         }
 
         let actionTaken = false;
+        const remaining = [...visibleTokens];
+
         for (const pair of bestChallenge.pairs) {
             const normFrom = normalize(pair.fromToken);
             const normLearning = normalize(pair.learningToken);
 
-            const tokenA = visibleTokens.find(t => normalize(t.cleanInnerText) === normFrom || normalize(t.text) === normFrom);
-            const tokenB = visibleTokens.find(t => normalize(t.cleanInnerText) === normLearning || normalize(t.text) === normLearning);
+            const tokenAIndex = remaining.findIndex(t => normalize(t.cleanInnerText) === normFrom || normalize(t.text) === normFrom);
+            if (tokenAIndex === -1) continue;
+            const tokenA = remaining[tokenAIndex];
 
-            if (tokenA && tokenB) {
-                console.log(`Solving Pair: "${tokenA.cleanInnerText || tokenA.text}" <-> "${tokenB.cleanInnerText || tokenB.text}"`);
-                await tokenA.element.click();
-                await tokenB.element.click();
-                solved++;
-                actionTaken = true;
-                await page.waitForTimeout(500);
+            const tokenBIndex = remaining.findIndex((t, i) =>
+                i !== tokenAIndex && (normalize(t.cleanInnerText) === normLearning || normalize(t.text) === normLearning)
+            );
+            if (tokenBIndex === -1) continue;
+            const tokenB = remaining[tokenBIndex];
+
+            console.log(`Solving Pair: "${tokenA.cleanInnerText || tokenA.text}" <-> "${tokenB.cleanInnerText || tokenB.text}"`);
+            await tokenA.element.click();
+            await tokenB.element.click();
+            solved++;
+            actionTaken = true;
+
+            // Remove highest index first so the other index stays valid
+            for (const index of [tokenAIndex, tokenBIndex].sort((a, b) => b - a)) {
+                remaining.splice(index, 1);
             }
+
+            await page.waitForTimeout(500);
         }
 
-        if (!actionTaken) break;
+        if (!actionTaken) {
+            idleRounds++;
+            if (idleRounds >= 3) {
+                console.warn('Match solver made no progress; stopping to avoid a loop.');
+                break;
+            }
+            await page.waitForTimeout(500);
+            continue;
+        }
+
+        idleRounds = 0;
     }
     return solved;
 }
