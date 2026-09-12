@@ -2,40 +2,17 @@ name: Streak keeper
 
 on:
   schedule:
-    # TEMP test slot — restore 23:00/23:45 UK crons after verifying schedule works
-    - cron: '50 22 * * *'
+    - cron: '0 23 * * *'
+      timezone: Europe/London
+    - cron: '45 23 * * *'
+      timezone: Europe/London
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
-  gate:
-    runs-on: ubuntu-latest
-    outputs:
-      should_run: ${{ steps.check.outputs.should_run }}
-    steps:
-      - id: check
-        name: Only run during 23:xx Europe/London on schedule
-        run: |
-          if [ "${{ github.event_name }}" != "schedule" ]; then
-            echo "should_run=true" >> "$GITHUB_OUTPUT"
-            echo "Non-schedule event (${{ github.event_name }}); running."
-            exit 0
-          fi
-
-          UK_NOW=$(TZ=Europe/London date '+%Y-%m-%d %H:%M %Z')
-          UK_HOUR=$(TZ=Europe/London date +%H)
-          echo "UK time: $UK_NOW"
-
-          # Covers both 23:00 and 23:45 UK slots (and modest GitHub cron delay).
-          if [ "$UK_HOUR" = "23" ]; then
-            echo "should_run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "should_run=false" >> "$GITHUB_OUTPUT"
-            echo "Skipping: want 23:xx UK, got hour $UK_HOUR."
-          fi
-
   login:
-    needs: gate
-    if: needs.gate.outputs.should_run == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
