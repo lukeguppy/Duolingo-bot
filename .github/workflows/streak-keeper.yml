@@ -2,9 +2,12 @@ name: Streak keeper
 
 on:
   schedule:
-    # GitHub cron is UTC-only. 23:00 UK is 23:00 UTC (GMT) or 22:00 UTC (BST),
-    # so fire both hours and skip unless Europe/London is actually 23:00.
+    # GitHub cron is UTC-only. UK local times map as:
+    #   23:00 UK -> 23:00 UTC (GMT) or 22:00 UTC (BST)
+    #   23:45 UK -> 23:45 UTC (GMT) or 22:45 UTC (BST)
+    # Fire all four UTC slots; skip unless Europe/London hour is 23.
     - cron: '0 22,23 * * *'
+    - cron: '45 22,23 * * *'
   push:
     branches:
       - main
@@ -17,7 +20,7 @@ jobs:
       should_run: ${{ steps.check.outputs.should_run }}
     steps:
       - id: check
-        name: Only run at 23:00 Europe/London on schedule
+        name: Only run during 23:xx Europe/London on schedule
         run: |
           if [ "${{ github.event_name }}" != "schedule" ]; then
             echo "should_run=true" >> "$GITHUB_OUTPUT"
@@ -29,11 +32,12 @@ jobs:
           UK_HOUR=$(TZ=Europe/London date +%H)
           echo "UK time: $UK_NOW"
 
+          # Covers both 23:00 and 23:45 UK slots (and modest GitHub cron delay).
           if [ "$UK_HOUR" = "23" ]; then
             echo "should_run=true" >> "$GITHUB_OUTPUT"
           else
             echo "should_run=false" >> "$GITHUB_OUTPUT"
-            echo "Skipping: want 23:00 UK, got hour $UK_HOUR."
+            echo "Skipping: want 23:xx UK, got hour $UK_HOUR."
           fi
 
   login:
