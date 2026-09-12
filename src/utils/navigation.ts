@@ -20,8 +20,10 @@ export async function startWordsLesson(page: Page): Promise<Session | null> {
     await practiceHubNav.click();
 
 
-    // Click "Words" collection button
-    const wordsButton = page.locator('[data-test="practice-hub-collection-button"]').filter({ hasText: 'Words' });
+    // Click "Words" collection button (exact word match — avoids matching other cards)
+    const wordsButton = page
+        .locator('[data-test="practice-hub-collection-button"]')
+        .filter({ hasText: /^Words\b/ });
     await wordsButton.waitFor({ state: 'visible', timeout: 10000 });
     console.log('Clicking Words button...');
     await wordsButton.click();
