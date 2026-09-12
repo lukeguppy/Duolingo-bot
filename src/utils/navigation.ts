@@ -16,12 +16,12 @@ export async function startWordsLesson(page: Page): Promise<Session | null> {
     // Dismiss common interstitial UI if present
     await dismissBlockingUi(page);
 
-    const startButton = page.getByRole('button', { name: /^(START|REVIEW)$/i }).first();
+    const startButton = page.getByRole('button', { name: /start|review/i }).first();
     try {
         await startButton.waitFor({ state: 'visible', timeout: 20000 });
     } catch (error) {
         // Fallback: open Practice Hub and click the Words card
-        console.log('Direct Words page did not show START/REVIEW. Falling back to Practice Hub UI...');
+        console.log('Direct Words page did not show Start/Review. Falling back to Practice Hub UI...');
         await page.goto('https://www.duolingo.com/practice-hub', { waitUntil: 'domcontentloaded' });
         await dismissBlockingUi(page);
 
@@ -31,9 +31,9 @@ export async function startWordsLesson(page: Page): Promise<Session | null> {
         const labels = await collectionButtons.allTextContents();
         console.log('Practice hub collections:', labels.map((t) => t.replace(/\s+/g, ' ').trim()));
 
+        // "Stories... review words ..." also contains "words" — exclude it.
         const wordsButton = collectionButtons
-            .filter({ hasText: /Words/i })
-            .filter({ hasNotText: /Stories/i })
+            .filter({ hasText: /^Words\b/i })
             .first();
 
         await wordsButton.waitFor({ state: 'visible', timeout: 10000 });
