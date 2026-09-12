@@ -2,15 +2,8 @@ name: Streak keeper
 
 on:
   schedule:
-    # GitHub cron is UTC-only. UK local times map as:
-    #   23:00 UK -> 23:00 UTC (GMT) or 22:00 UTC (BST)
-    #   23:45 UK -> 23:45 UTC (GMT) or 22:45 UTC (BST)
-    # Fire all four UTC slots; skip unless Europe/London hour is 23.
-    - cron: '0 22,23 * * *'
-    - cron: '45 22,23 * * *'
-  push:
-    branches:
-      - main
+    # TEMP test slot — restore 23:00/23:45 UK crons after verifying schedule works
+    - cron: '50 22 * * *'
   workflow_dispatch:
 
 jobs:
