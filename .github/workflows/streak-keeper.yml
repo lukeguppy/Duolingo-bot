@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   login:
@@ -42,6 +43,6 @@ jobs:
       - name: Run Practice
         env:
           ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}
-          PRACTICE_LANGUAGE: Turkish
+          PRACTICE_LANGUAGE: Spanish
           HEADLESS: true
         run: pnpm practice
