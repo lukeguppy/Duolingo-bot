@@ -2,10 +2,10 @@ name: Streak keeper
 
 on:
   schedule:
-    - cron: '0 22,23 * * *'
-      timezone: Europe/London
-    - cron: '30 22,23 * * *'
-      timezone: Europe/London
+    # 6:00 PM (17:00 UTC for BST / 18:00 UTC for GMT)
+    - cron: '0 17,18 * * *'
+    # 10:00 PM, 10:30 PM, 11:00 PM, 11:30 PM (21:00-22:30 UTC in BST / 22:00-23:30 UTC in GMT)
+    - cron: '0,30 21,22,23 * * *'
   push:
     branches:
       - main
