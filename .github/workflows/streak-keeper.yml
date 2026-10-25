@@ -51,14 +51,18 @@ jobs:
           ENCRYPTION_KEY: ${{ secrets.ENCRYPTION_KEY }}
           PRACTICE_LANGUAGE: Spanish
           HEADLESS: true
-        run: pnpm practice
+        run: |
+          set -o pipefail
+          pnpm practice 2>&1 | tee practice-output.txt
 
       - name: Upload practice logs
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: practice-logs
-          path: logs/
+          path: |
+            logs/
+            practice-output.txt
           if-no-files-found: ignore
           retention-days: 3
 
@@ -76,6 +80,16 @@ jobs:
           else
             echo "Status: FAILED - no verification result produced" >> streak-status.md
           fi
+          echo "" >> streak-status.md
+          echo "## Practice output tail" >> streak-status.md
+          echo "" >> streak-status.md
+          echo '```text' >> streak-status.md
+          if [ -f practice-output.txt ]; then
+            tail -n 120 practice-output.txt >> streak-status.md
+          else
+            echo "No practice output captured" >> streak-status.md
+          fi
+          echo '```' >> streak-status.md
 
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
