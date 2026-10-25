@@ -7,7 +7,7 @@ import { getLocalDateString } from './homepage.js';
 /**
  * Streak and XP numbers for an account at a point in time.
  */
-interface AccountStats {
+export interface AccountStats {
     streak: number | null;
     totalXp: number | null;
     lastExtendedDate: string | null;
@@ -41,7 +41,7 @@ function toStats(userData: UserData): AccountStats {
  * Fetch fresh streak and XP stats from Duolingo, retrying to allow the lesson
  * score submission to finish before the browser closes.
  */
-async function fetchAccountStats(
+export async function fetchAccountStats(
     page: Page,
     userId: number,
     maxAttempts: number = 10,

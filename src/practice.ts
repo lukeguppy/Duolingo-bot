@@ -9,7 +9,7 @@ import { solveVisibleTokens } from './utils/solver.js';
 import { startWordsLesson } from './utils/navigation.js';
 import { getCurrentLanguage, selectLanguage } from './utils/homepage.js';
 import { getBrowserConfig, getContextOptions } from './utils/browser.js';
-import { verifySessionOutcome, writeVerificationReport } from './utils/verification.js';
+import { verifySessionOutcome, writeVerificationReport, fetchAccountStats } from './utils/verification.js';
 
 dotenv.config();
 
@@ -73,10 +73,27 @@ dotenv.config();
 
         fs.writeFileSync(path.join(logDir, 'session_data.json'), JSON.stringify(sessionData, null, 2));
 
-        // Identify and Solve Loop
+        // Identify and Solve Loop.
+        // Duolingo's Words review flow begins further rounds with a "Start/Review"
+        // button mid-lesson, so an early break here abandons the session and no XP
+        // is credited. Only stop once the account's XP proves the session landed
+        // (or a hard safety cap is hit).
+        const sessionStartXp = userData.totalXp ?? null;
+        let creditsXp = false;
+        let iterations = 0;
+        let lastXpCheckMs = 0;
+        let startXpValue : number | null = sessionStartXp;
+        let consecutiveStartClicks = 0;
+
         while (true) {
+            iterations++;
+            if (iterations > 400) {
+                console.warn('Solver loop hit the safety cap; stopping.');
+                break;
+            }
+
             try {
-                // // 1. Try to click "Continue" button (End of session or next section)
+                // 1. Try to click "Continue" button (End of session or next section)
                 const continueButton = page.locator('[data-test="player-next"]');
                 if (await continueButton.isVisible()) {
                     await continueButton.click();
@@ -86,12 +103,40 @@ dotenv.config();
                 const solvedCount = await solveVisibleTokens(page, sessionData);
                 console.log(`Solved ${solvedCount} tokens.`);
 
-                // Check for Start button directly
+                // 3. Handle Start/Review buttons: the hub shows them after the
+                //    lesson, but the lesson flow also uses them to begin rounds.
                 const startButton = page.getByRole('button', { name: /START|REVIEW/i });
                 if (await startButton.isVisible()) {
-                    console.log('Start button detected. Session complete!');
-                    break;
+                    const now = Date.now();
+                    if (startXpValue !== null && now - lastXpCheckMs > 5000) {
+                        lastXpCheckMs = now;
+                        const stats = await fetchAccountStats(page, userData.id, 1, 0);
+                        if (stats.totalXp !== null && stats.totalXp > startXpValue) {
+                            startXpValue = stats.totalXp;
+                            creditsXp = true;
+                            console.log(`XP credited during session (${sessionStartXp} -> ${stats.totalXp}). Session complete!`);
+                            break;
+                        }
+                    }
+
+                    if (creditsXp) {
+                        break;
+                    }
+
+                    consecutiveStartClicks++;
+                    if (consecutiveStartClicks > 4) {
+                        console.warn('Start button keeps reappearing after clicking; finishing loop.');
+                        break;
+                    }
+
+                    console.log('Start/Review button detected mid-session; starting next round.');
+                    await startButton.click();
+                    await startButton.waitFor({ state: 'hidden', timeout: 10000 }).catch(() => {
+                        console.log('Start button still visible after click; continuing anyway.');
+                    });
+                    continue;
                 }
+                consecutiveStartClicks = 0;
             } catch (e: any) {
                 if (e.message && e.message.includes('Target page, context or browser has been closed')) {
                     break;
