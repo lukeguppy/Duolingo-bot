@@ -97,36 +97,36 @@ export function getSkillPath(logs: NetworkLogs): any[] {
     return units;
 }
 
+/**
+ * Get today's date in YYYY-MM-DD format, adjusted for the account timezone.
+ * Timezone offsets are in the Duolingo format, e.g. "+0300" or "-0500".
+ */
+export function getLocalDateString(timezoneOffset?: string): string {
+    const now = new Date();
+
+    if (timezoneOffset) {
+        // Parse offset (e.g. "+0300" -> 3 hours)
+        const sign = timezoneOffset[0] === '+' ? 1 : -1;
+        const hours = parseInt(timezoneOffset.slice(1, 3), 10);
+        const minutes = parseInt(timezoneOffset.slice(3, 5), 10);
+        const offsetMs = sign * (hours * 60 + minutes) * 60 * 1000;
+
+        // Get UTC time and apply the account's offset
+        const userTime = new Date(now.getTime() + offsetMs);
+        return userTime.toISOString().split('T')[0];
+    }
+
+    // Fallback to local date
+    return now.toISOString().split('T')[0];
+}
+
 export function getTodaysStreakCompleted(logs: NetworkLogs): boolean {
     const userData = logs.userData;
     if (!userData?.streakData?.currentStreak?.lastExtendedDate) {
         return false;
     }
 
-    // Get today's date in YYYY-MM-DD format
-    // Use the user's timezone offset if available
-    const now = new Date();
-    const timezoneOffset = userData.timezoneOffset;
-
-    // If we have timezone info, adjust accordingly
-    // timezoneOffset is in format like "+0300" or "-0500"
-    let todayStr: string;
-    if (timezoneOffset) {
-        // Parse offset (e.g., "+0300" -> 3 hours)
-        const sign = timezoneOffset[0] === '+' ? 1 : -1;
-        const hours = parseInt(timezoneOffset.slice(1, 3));
-        const minutes = parseInt(timezoneOffset.slice(3, 5));
-        const offsetMs = sign * (hours * 60 + minutes) * 60 * 1000;
-
-        // Get UTC time and apply user's offset
-        const userTime = new Date(now.getTime() + offsetMs);
-        todayStr = userTime.toISOString().split('T')[0];
-    } else {
-        // Fallback to local date
-        todayStr = now.toISOString().split('T')[0];
-    }
-
-    return userData.streakData.currentStreak.lastExtendedDate === todayStr;
+    return userData.streakData.currentStreak.lastExtendedDate === getLocalDateString(userData.timezoneOffset);
 }
 
 /**

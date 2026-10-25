@@ -1,5 +1,8 @@
 name: Streak keeper
 
+permissions:
+  contents: write
+
 on:
   schedule:
     # 6:00 PM (17:00 UTC for BST / 18:00 UTC for GMT)
@@ -51,9 +54,39 @@ jobs:
         run: pnpm practice
 
       - name: Upload practice logs
-        if: failure()
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: practice-logs
           path: logs/
           if-no-files-found: ignore
+          retention-days: 3
+
+      - name: Commit streak status
+        if: always()
+        run: |
+          echo "# Streak Status" > streak-status.md
+          echo "Last run on: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> streak-status.md
+          echo "" >> streak-status.md
+          if [ -f logs/streak-status.txt ]; then
+            echo '```' >> streak-status.md
+            cat logs/streak-status.txt >> streak-status.md
+            echo '' >> streak-status.md
+            echo '```' >> streak-status.md
+          else
+            echo "Status: FAILED - no verification result produced" >> streak-status.md
+          fi
+
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          git add streak-status.md
+
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "chore: update streak status [skip ci]"
+
+          git push origin HEAD:main || exit 1

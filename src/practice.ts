@@ -9,6 +9,7 @@ import { solveVisibleTokens } from './utils/solver.js';
 import { startWordsLesson } from './utils/navigation.js';
 import { getCurrentLanguage, selectLanguage } from './utils/homepage.js';
 import { getBrowserConfig, getContextOptions } from './utils/browser.js';
+import { verifySessionOutcome, writeVerificationReport } from './utils/verification.js';
 
 dotenv.config();
 
@@ -100,8 +101,21 @@ dotenv.config();
         }
 
         console.log('Session loop ended.');
+
+        // Verify the lesson actually counted before closing the browser.
+        // Closing too early can abort the score submission while still
+        // reporting success, silently losing the streak.
+        const verification = await verifySessionOutcome(page, userData);
+        writeVerificationReport(logDir, verification);
+
         await page.screenshot({ path: path.join(logDir, 'session_completed.png') });
         await browser.close();
+
+        console.log(verification.verified ? `✅ ${verification.reason}` : `❌ ${verification.reason}`);
+
+        if (!verification.verified) {
+            process.exit(1);
+        }
 
     } catch (error) {
         console.error('An error occurred:', error);
