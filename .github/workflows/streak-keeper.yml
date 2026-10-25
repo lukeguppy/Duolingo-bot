@@ -78,7 +78,15 @@ jobs:
             echo '' >> streak-status.md
             echo '```' >> streak-status.md
           else
-            echo "Status: FAILED - no verification result produced" >> streak-status.md
+            status_file=$(find logs -name streak-status.txt 2>/dev/null | head -n 1)
+            if [ -n "$status_file" ] && [ -f "$status_file" ]; then
+              echo '```' >> streak-status.md
+              cat "$status_file" >> streak-status.md
+              echo '' >> streak-status.md
+              echo '```' >> streak-status.md
+            else
+              echo "Status: FAILED - no verification result produced" >> streak-status.md
+            fi
           fi
           echo "" >> streak-status.md
           echo "## Practice output tail" >> streak-status.md
