@@ -30,11 +30,10 @@ export async function getChallengeType(page: Page): Promise<ChallengeType> {
 export async function solveVisibleTokens(page: Page, sessionData: Session): Promise<number> {
     const challengeType = await getChallengeType(page);
     if (challengeType === 'none') {
-        console.error('No challenge type found');
         return 0;
-    } else {
-        console.log(`Challenge type: ${challengeType}`);
     }
+
+    console.log(`Challenge type: ${challengeType}`);
 
     if (['match', 'extendedMatch'].includes(challengeType)) {
         return await solveMatchChallenge(page, sessionData);

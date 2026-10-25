@@ -84,10 +84,11 @@ dotenv.config();
         let lastXpCheckMs = 0;
         let startXpValue : number | null = sessionStartXp;
         let consecutiveStartClicks = 0;
+        let idleIterations = 0;
 
         while (true) {
             iterations++;
-            if (iterations > 400) {
+            if (iterations > 1500) {
                 console.warn('Solver loop hit the safety cap; stopping.');
                 break;
             }
@@ -101,7 +102,27 @@ dotenv.config();
 
                 // 2. Solve visible tokens
                 const solvedCount = await solveVisibleTokens(page, sessionData);
-                console.log(`Solved ${solvedCount} tokens.`);
+
+                // Track idle iterations (no progress) and periodically dump page
+                // state so breakages can be diagnosed from the console output.
+                if (solvedCount === 0) {
+                    idleIterations++;
+                    if (idleIterations % 25 === 0) {
+                        const heading = await page
+                            .locator('h1, h2, [data-test="player-name"], [data-test="player-heading"]')
+                            .first()
+                            .textContent({ timeout: 2000 })
+                            .catch(() => null);
+                        console.log(
+                            `Idle iteration ${idleIterations}: url=${page.url()}` +
+                            (heading ? ` heading="${heading.trim().slice(0, 120)}"` : ''),
+                        );
+                        await page.screenshot({ path: path.join(logDir, `idle_state_${iterations}.png`) });
+                    }
+                } else {
+                    idleIterations = 0;
+                    console.log(`Solved ${solvedCount} tokens.`);
+                }
 
                 // 3. Handle Start/Review buttons: the hub shows them after the
                 //    lesson, but the lesson flow also uses them to begin rounds.

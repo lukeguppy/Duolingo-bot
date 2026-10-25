@@ -85,7 +85,7 @@ jobs:
           echo "" >> streak-status.md
           echo '```text' >> streak-status.md
           if [ -f practice-output.txt ]; then
-            tail -n 120 practice-output.txt >> streak-status.md
+            tail -n 250 practice-output.txt >> streak-status.md
           else
             echo "No practice output captured" >> streak-status.md
           fi
