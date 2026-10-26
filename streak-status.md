@@ -1,12 +1,12 @@
 # Streak Status
-Last run on: 2026-10-26 00:13:11 UTC
+Last run on: 2026-10-26 00:47:28 UTC
 
 ```
-trackedAt: 2026-10-26T00:13:09.788Z
+trackedAt: 2026-10-26T00:47:25.759Z
 verified: true
 reason: Session credited 10 XP; streak complete for 2026-10-26.
-streak: 1296 -> 1297 (delta 1)
-xp: 50380 -> 50390 (delta 10)
+streak: 1297 -> 1297 (delta 0)
+xp: 50390 -> 50400 (delta 10)
 lastExtendedDate: 2026-10-26
 ```
 
@@ -21,14 +21,14 @@ lastExtendedDate: 2026-10-26
 > duolingo-bot@1.0.0 exec-script /home/runner/work/Duolingo-bot/Duolingo-bot
 > node --loader ts-node/esm --experimental-specifier-resolution=node src/practice.ts
 
-(node:2338) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+(node:2740) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
 --import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2338) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(node:2740) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
-[dotenv@17.2.3] injecting env (0) from .env -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
 Starting practice session...
 Navigating to Words lesson...
 Clicking Start button...
@@ -36,55 +36,53 @@ Session data captured
 Idle iteration 25: url=https://www.duolingo.com/practice-hub/words/practice
 Idle iteration 50: url=https://www.duolingo.com/practice-hub/words/practice
 Challenge type: match
-Solving Pair: "stress" <-> "estrés"
-Solving Pair: "bed" <-> "cama"
-Solving Pair: "complicated" <-> "complicado"
-Solving Pair: "to sign" <-> "firmar"
-Solving Pair: "close" <-> "cierro"
+Solving Pair: "goal" <-> "meta"
+Solving Pair: "to help" <-> "ayudar"
+Solving Pair: "to begin to" <-> "empezar a"
+Solving Pair: "professional" <-> "profesional"
+Solving Pair: "support" <-> "apoyo"
 Solved 5 tokens.
 Challenge type: extendedListenMatch
-Solving Self-Match: "bed-challenge-tap-token"
-Solving Self-Match: "sign-challenge-tap-token to"
-Solving Self-Match: "star-challenge-tap-token"
-Solving Self-Match: "nose-challenge-tap-token"
-Solving Self-Match: "stress-challenge-tap-token"
-Solving Self-Match: "temple-challenge-tap-token"
-Solving Self-Match: "worse-challenge-tap-token"
-Solving Self-Match: "close-challenge-tap-token"
-Solving Self-Match: "fix-challenge-tap-token to"
-Solving Self-Match: "Sunday-challenge-tap-token"
-Solving Self-Match: "carnival-challenge-tap-token"
-Solving Self-Match: "less-challenge-tap-token"
-Solving Self-Match: "complicated-challenge-tap-token"
+Solving Self-Match: "other-challenge-tap-token the"
+Solving Self-Match: "tall-challenge-tap-token"
+Solving Self-Match: "bye-challenge-tap-token"
+Solving Self-Match: "awake-challenge-tap-token"
+Solving Self-Match: "congratulate-challenge-tap-token"
+Solving Self-Match: "professional-challenge-tap-token"
+Solving Self-Match: "support-challenge-tap-token"
+Solving Self-Match: "Cuban-challenge-tap-token"
+Solving Self-Match: "goal-challenge-tap-token"
+Solving Self-Match: "begin to to-challenge-tap-token"
+Solving Self-Match: "help-challenge-tap-token to"
+Solving Self-Match: "experienced-challenge-tap-token"
 No active tokens found
-Solved 13 tokens.
+Solved 12 tokens.
 Challenge type: extendedMatch
-Solving Pair: "stress" <-> "estrés"
-Solving Pair: "close" <-> "cierro"
-Solving Pair: "quiet" <-> "callado"
-Solving Pair: "skirt" <-> "falda"
-Solving Pair: "to fix" <-> "arreglar"
-Solving Pair: "to post" <-> "publicar"
-Solving Pair: "nose" <-> "nariz"
-Solving Pair: "to sign" <-> "firmar"
-Solving Pair: "candy" <-> "caramelo"
-Solving Pair: "Sunday" <-> "domingo"
-Solving Pair: "star" <-> "estrella"
-Solving Pair: "(to) carry out" <-> "realizar"
-Solving Pair: "temple" <-> "templo"
-Solving Pair: "worse" <-> "peor"
-Solving Pair: "less" <-> "menos"
-Solving Pair: "penguin" <-> "pingüino"
-Solving Pair: "complicated" <-> "complicado"
-Solving Pair: "bed" <-> "cama"
-Solving Pair: "carnival" <-> "carnaval"
-Solving Pair: "headphones" <-> "auricular"
-Solving Pair: "once" <-> "una vez que"
-Solved 21 tokens.
+Solving Pair: "to help" <-> "ayudar"
+Solving Pair: "support" <-> "apoyo"
+Solving Pair: "experienced" <-> "sintió"
+Solving Pair: "the other" <-> "el otro"
+Solving Pair: "goal" <-> "meta"
+Solving Pair: "Cuban" <-> "cubano"
+Solving Pair: "regional" <-> "regional"
+Solving Pair: "How was" <-> "qué tal"
+Solving Pair: "bye" <-> "chao"
+Solving Pair: "professional" <-> "profesional"
+Solving Pair: "her" <-> "le"
+Solving Pair: "tall" <-> "alto"
+Solving Pair: "rights" <-> "derechos"
+Solving Pair: "awake" <-> "despierto"
+Solving Pair: "bedroom" <-> "habitación"
+Solving Pair: "(I) tend to" <-> "suelo"
+Solving Pair: "mailbox" <-> "buzón"
+Solving Pair: "to begin to" <-> "empezar a"
+Solving Pair: "well" <-> "bueno"
+Solving Pair: "congratulate" <-> "felicitar"
+Solved 20 tokens.
 Challenge type: extendedMatch
-XP credited during session (50380 -> 50390). Session complete!
+XP credited during session (50390 -> 50400). Session complete!
 Session loop ended.
-Session end. Streak: 1296, XP: 50380, lastExtended: 2026-10-25
-Post-session streak: 1297, XP: 50390, lastExtended: 2026-10-26
+Session end. Streak: 1297, XP: 50390, lastExtended: 2026-10-26
+Post-session streak: 1297, XP: 50400, lastExtended: 2026-10-26
 ✅ Session credited 10 XP; streak complete for 2026-10-26.
 ```
