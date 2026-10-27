@@ -1,12 +1,12 @@
 # Streak Status
-Last run on: 2026-10-27 00:47:27 UTC
+Last run on: 2026-10-27 01:27:02 UTC
 
 ```
-trackedAt: 2026-10-27T00:47:24.433Z
+trackedAt: 2026-10-27T01:27:00.550Z
 verified: true
 reason: Session credited 10 XP; streak complete for 2026-10-27.
-streak: 1297 -> 1298 (delta 1)
-xp: 50410 -> 50420 (delta 10)
+streak: 1298 -> 1298 (delta 0)
+xp: 50420 -> 50430 (delta 10)
 lastExtendedDate: 2026-10-27
 ```
 
@@ -21,69 +21,70 @@ lastExtendedDate: 2026-10-27
 > duolingo-bot@1.0.0 exec-script /home/runner/work/Duolingo-bot/Duolingo-bot
 > node --loader ts-node/esm --experimental-specifier-resolution=node src/practice.ts
 
-(node:2739) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+(node:2534) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
 --import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2739) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(node:2534) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
 Starting practice session...
 Navigating to Words lesson...
 Clicking Start button...
 Session data captured
 Idle iteration 25: url=https://www.duolingo.com/practice-hub/words/practice
+Idle iteration 50: url=https://www.duolingo.com/practice-hub/words/practice
 Challenge type: match
-Solving Pair: "key" <-> "llave"
-Solving Pair: "elevator" <-> "ascensor"
-Solving Pair: "to deliver" <-> "entregar"
-Solving Pair: "answer" <-> "respuesta"
-Solving Pair: "Argentina" <-> "Argentina"
+Solving Pair: "time" <-> "vez"
+Solving Pair: "shelter" <-> "refugio"
+Solving Pair: "clear" <-> "despejado"
+Solving Pair: "what a relief" <-> "qué alivio"
+Solving Pair: "to snow" <-> "nevar"
 Solved 5 tokens.
 Challenge type: extendedListenMatch
-Solving Self-Match: "marriage-challenge-tap-token"
-Solving Self-Match: "key-challenge-tap-token"
-Solving Self-Match: "elevator-challenge-tap-token"
-Solving Self-Match: "tutor-challenge-tap-token"
-Solving Self-Match: "made-challenge-tap-token"
-Solving Self-Match: "tourist-challenge-tap-token"
-Solving Self-Match: "answer-challenge-tap-token"
-Solving Self-Match: "laughed-challenge-tap-token"
-Solving Self-Match: "deliver-challenge-tap-token to"
-Solving Self-Match: "Argentina-challenge-tap-token"
-Solving Self-Match: "version-challenge-tap-token"
-Solving Self-Match: "club-challenge-tap-token"
-Solving Self-Match: "potato-challenge-tap-token"
+Solving Self-Match: "salary-challenge-tap-token"
+Solving Self-Match: "snow-challenge-tap-token to"
+Solving Self-Match: "bored-challenge-tap-token"
+Solving Self-Match: "of-challenge-tap-token type"
+Solving Self-Match: "shelter-challenge-tap-token"
+Solving Self-Match: "clear-challenge-tap-token"
+Solving Self-Match: "a relief-challenge-tap-token what"
+Solving Self-Match: "seafood-challenge-tap-token"
+Solving Self-Match: "time-challenge-tap-token"
+Solving Self-Match: "group-challenge-tap-token"
+Solving Self-Match: "product-challenge-tap-token"
+Solving Self-Match: "accent-challenge-tap-token"
+Solving Self-Match: "that-challenge-tap-token"
 No active tokens found
 Solved 13 tokens.
 Challenge type: extendedMatch
-Solving Pair: "to deliver" <-> "entregar"
-Solving Pair: "limit" <-> "límite"
-Solving Pair: "tutor" <-> "tutor"
-Solving Pair: "marriage" <-> "matrimonio"
-Solving Pair: "elevator" <-> "ascensor"
-Solving Pair: "answer" <-> "respuesta"
-Solving Pair: "trumpet" <-> "trompeta"
-Solving Pair: "Argentina" <-> "Argentina"
-Solving Pair: "laughed" <-> "me reí"
-Solving Pair: "hallway" <-> "pasillo"
-Solving Pair: "potato" <-> "papa"
-Solving Pair: "made" <-> "tomado"
-Solving Pair: "whose" <-> "de quién"
-Solving Pair: "tourist" <-> "turista"
-Solving Pair: "version" <-> "versión"
-Solving Pair: "license" <-> "licencia"
-Solving Pair: "key" <-> "llave"
-Solving Pair: "paintbrush" <-> "pincel"
+Solving Pair: "clear" <-> "despejado"
+Solving Pair: "work" <-> "obra"
+Solving Pair: "group" <-> "grupo"
+Solving Pair: "that" <-> "aquello"
+Solving Pair: "accent" <-> "acento"
+Solving Pair: "bored" <-> "aburrido"
+Solving Pair: "(I) go to bed" <-> "me acuesto"
+Solving Pair: "seafood" <-> "marisco"
+Solving Pair: "to tie" <-> "atar"
+Solving Pair: "what a relief" <-> "qué alivio"
+Solving Pair: "national" <-> "nacional"
+Solving Pair: "opinion" <-> "opinión"
+Solving Pair: "translation" <-> "traducción"
+Solving Pair: "time" <-> "vez"
+Solving Pair: "shelter" <-> "refugio"
+Solving Pair: "product" <-> "producto"
+Solving Pair: "type of" <-> "tipo de"
+Solving Pair: "to snow" <-> "nevar"
+Solving Pair: "helping them" <-> "ayudándolas"
+Solving Pair: "salary" <-> "sueldo"
 Solving Pair: "club" <-> "club"
-Solving Pair: "mayonnaise" <-> "mayonesa"
-Solving Pair: "her" <-> "le"
 Solved 21 tokens.
 Challenge type: extendedMatch
-XP credited during session (50410 -> 50420). Session complete!
+XP credited during session (50420 -> 50430). Session complete!
 Session loop ended.
-Session end. Streak: 1297, XP: 50410, lastExtended: 2026-10-26
-Post-session streak: 1298, XP: 50420, lastExtended: 2026-10-27
+Session end. Streak: 1298, XP: 50420, lastExtended: 2026-10-27
+Post-session streak: 1298, XP: 50430, lastExtended: 2026-10-27
 ✅ Session credited 10 XP; streak complete for 2026-10-27.
 ```
