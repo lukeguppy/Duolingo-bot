@@ -1,12 +1,12 @@
 # Streak Status
-Last run on: 2026-10-28 00:44:05 UTC
+Last run on: 2026-10-28 01:14:57 UTC
 
 ```
-trackedAt: 2026-10-28T00:44:03.057Z
+trackedAt: 2026-10-28T01:14:55.844Z
 verified: true
 reason: Session credited 10 XP; streak complete for 2026-10-28.
-streak: 1298 -> 1299 (delta 1)
-xp: 50450 -> 50460 (delta 10)
+streak: 1299 -> 1299 (delta 0)
+xp: 50460 -> 50470 (delta 10)
 lastExtendedDate: 2026-10-28
 ```
 
@@ -21,14 +21,14 @@ lastExtendedDate: 2026-10-28
 > duolingo-bot@1.0.0 exec-script /home/runner/work/Duolingo-bot/Duolingo-bot
 > node --loader ts-node/esm --experimental-specifier-resolution=node src/practice.ts
 
-(node:2538) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+(node:2584) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
 --import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2538) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(node:2584) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
 [dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  enable debug logging with { debug: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
 Starting practice session...
 Navigating to Words lesson...
 Clicking Start button...
@@ -36,55 +36,55 @@ Session data captured
 Idle iteration 25: url=https://www.duolingo.com/practice-hub/words/practice
 Idle iteration 50: url=https://www.duolingo.com/practice-hub/words/practice
 Challenge type: match
-Solving Pair: "hike" <-> "caminata"
-Solving Pair: "good night" <-> "buenas noches"
-Solving Pair: "in common" <-> "en común"
-Solving Pair: "raincoat" <-> "impermeable"
-Solving Pair: "puddle" <-> "charco"
+Solving Pair: "negative" <-> "negativo"
+Solving Pair: "midnight" <-> "medianoche"
+Solving Pair: "to wait" <-> "esperar"
+Solving Pair: "to turn off" <-> "apagar"
+Solving Pair: "light" <-> "luz"
 Solved 5 tokens.
 Challenge type: extendedListenMatch
-Solving Self-Match: "good night-challenge-tap-token"
-Solving Self-Match: "home-challenge-tap-token"
-Solving Self-Match: "warn-challenge-tap-token"
-Solving Self-Match: "sunscreen-challenge-tap-token"
-Solving Self-Match: "sure-challenge-tap-token"
-Solving Self-Match: "hike-challenge-tap-token"
-Solving Self-Match: "drawn-challenge-tap-token"
-Solving Self-Match: "puddle-challenge-tap-token"
-Solving Self-Match: "sending-challenge-tap-token"
-Solving Self-Match: "raincoat-challenge-tap-token"
-Solving Self-Match: "call-challenge-tap-token to"
-Solving Self-Match: "common-challenge-tap-token in"
-Solving Self-Match: "is-challenge-tap-token"
+Solving Self-Match: "negative-challenge-tap-token"
+Solving Self-Match: "exactly-challenge-tap-token"
+Solving Self-Match: "about to-challenge-tap-token"
+Solving Self-Match: "to wait-challenge-tap-token"
+Solving Self-Match: "salty-challenge-tap-token"
+Solving Self-Match: "camp-challenge-tap-token to"
+Solving Self-Match: "off-challenge-tap-token to turn"
+Solving Self-Match: "light-challenge-tap-token"
+Solving Self-Match: "client-challenge-tap-token"
+Solving Self-Match: "robbery-challenge-tap-token"
+Solving Self-Match: "anywhere-challenge-tap-token"
+Solving Self-Match: "midnight-challenge-tap-token"
+Solving Self-Match: "is name?-challenge-tap-token what your"
 No active tokens found
 Solved 13 tokens.
 Challenge type: extendedMatch
-Solving Pair: "raincoat" <-> "impermeable"
-Solving Pair: "to call" <-> "llamar"
-Solving Pair: "home" <-> "vivienda"
-Solving Pair: "blood" <-> "sangre"
-Solving Pair: "warn" <-> "advierto"
-Solving Pair: "in common" <-> "en común"
-Solving Pair: "sunscreen" <-> "protector solar"
-Solving Pair: "is" <-> "va"
-Solving Pair: "singer" <-> "cantante"
-Solving Pair: "puddle" <-> "charco"
-Solving Pair: "sure" <-> "estar seguro"
-Solving Pair: "drawn" <-> "empatar"
-Solving Pair: "work" <-> "trabajo"
-Solving Pair: "bikini" <-> "bikini"
-Solving Pair: "brown" <-> "castaño"
-Solving Pair: "case" <-> "maletín"
-Solving Pair: "hike" <-> "caminata"
-Solving Pair: "sending" <-> "enviándole"
-Solving Pair: "good night" <-> "buenas noches"
-Solving Pair: "retiree" <-> "jubilado"
-Solving Pair: "general" <-> "general"
+Solving Pair: "robbery" <-> "robo"
+Solving Pair: "uncle" <-> "tío"
+Solving Pair: "click" <-> "tronar"
+Solving Pair: "about to" <-> "a punto de"
+Solving Pair: "maybe" <-> "quizás"
+Solving Pair: "anywhere" <-> "en ninguna parte"
+Solving Pair: "what is your name?" <-> "cómo te llamas"
+Solving Pair: "peanut" <-> "maní"
+Solving Pair: "negative" <-> "negativo"
+Solving Pair: "tuna" <-> "atún"
+Solving Pair: "to wait" <-> "esperar"
+Solving Pair: "to camp" <-> "acampar"
+Solving Pair: "light" <-> "luz"
+Solving Pair: "midnight" <-> "medianoche"
+Solving Pair: "to turn off" <-> "apagar"
+Solving Pair: "exactly" <-> "justo"
+Solving Pair: "salty" <-> "salado"
+Solving Pair: "client" <-> "cliente"
+Solving Pair: "doctor" <-> "doctor"
+Solving Pair: "athlete" <-> "atleta"
+Solving Pair: "box" <-> "caja"
 Solved 21 tokens.
 Challenge type: extendedMatch
-XP credited during session (50450 -> 50460). Session complete!
+XP credited during session (50460 -> 50470). Session complete!
 Session loop ended.
-Session end. Streak: 1298, XP: 50450, lastExtended: 2026-10-27
-Post-session streak: 1299, XP: 50460, lastExtended: 2026-10-28
+Session end. Streak: 1299, XP: 50460, lastExtended: 2026-10-28
+Post-session streak: 1299, XP: 50470, lastExtended: 2026-10-28
 ✅ Session credited 10 XP; streak complete for 2026-10-28.
 ```
