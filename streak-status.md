@@ -1,12 +1,12 @@
 # Streak Status
-Last run on: 2026-10-28 01:14:57 UTC
+Last run on: 2026-10-28 01:50:00 UTC
 
 ```
-trackedAt: 2026-10-28T01:14:55.844Z
+trackedAt: 2026-10-28T01:49:58.373Z
 verified: true
 reason: Session credited 10 XP; streak complete for 2026-10-28.
 streak: 1299 -> 1299 (delta 0)
-xp: 50460 -> 50470 (delta 10)
+xp: 50470 -> 50480 (delta 10)
 lastExtendedDate: 2026-10-28
 ```
 
@@ -21,70 +21,68 @@ lastExtendedDate: 2026-10-28
 > duolingo-bot@1.0.0 exec-script /home/runner/work/Duolingo-bot/Duolingo-bot
 > node --loader ts-node/esm --experimental-specifier-resolution=node src/practice.ts
 
-(node:2584) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+(node:2304) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
 --import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2584) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(node:2304) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
 Starting practice session...
 Navigating to Words lesson...
 Clicking Start button...
 Session data captured
-Idle iteration 25: url=https://www.duolingo.com/practice-hub/words/practice
-Idle iteration 50: url=https://www.duolingo.com/practice-hub/words/practice
 Challenge type: match
-Solving Pair: "negative" <-> "negativo"
-Solving Pair: "midnight" <-> "medianoche"
-Solving Pair: "to wait" <-> "esperar"
-Solving Pair: "to turn off" <-> "apagar"
-Solving Pair: "light" <-> "luz"
+Solving Pair: "to be right" <-> "tener razón"
+Solving Pair: "chess" <-> "ajedrez"
+Solving Pair: "group" <-> "grupo"
+Solving Pair: "bald" <-> "calvo"
+Solving Pair: "to chat" <-> "charlar"
 Solved 5 tokens.
 Challenge type: extendedListenMatch
-Solving Self-Match: "negative-challenge-tap-token"
-Solving Self-Match: "exactly-challenge-tap-token"
-Solving Self-Match: "about to-challenge-tap-token"
-Solving Self-Match: "to wait-challenge-tap-token"
-Solving Self-Match: "salty-challenge-tap-token"
-Solving Self-Match: "camp-challenge-tap-token to"
-Solving Self-Match: "off-challenge-tap-token to turn"
-Solving Self-Match: "light-challenge-tap-token"
-Solving Self-Match: "client-challenge-tap-token"
-Solving Self-Match: "robbery-challenge-tap-token"
-Solving Self-Match: "anywhere-challenge-tap-token"
-Solving Self-Match: "midnight-challenge-tap-token"
-Solving Self-Match: "is name?-challenge-tap-token what your"
+Solving Self-Match: "know-challenge-tap-token to"
+Solving Self-Match: "chess-challenge-tap-token"
+Solving Self-Match: "useful-challenge-tap-token"
+Solving Self-Match: "be right-challenge-tap-token to"
+Solving Self-Match: "group-challenge-tap-token"
+Solving Self-Match: "chat-challenge-tap-token to"
+Solving Self-Match: "bald-challenge-tap-token"
+Solving Self-Match: "act-challenge-tap-token to"
+Solving Self-Match: "ugly-challenge-tap-token"
+Solving Self-Match: "annual-challenge-tap-token"
+Solving Self-Match: "day-challenge-tap-token dish of the"
+Solving Self-Match: "wedding-challenge-tap-token"
+Solving Self-Match: "activity-challenge-tap-token"
 No active tokens found
 Solved 13 tokens.
 Challenge type: extendedMatch
-Solving Pair: "robbery" <-> "robo"
-Solving Pair: "uncle" <-> "tío"
-Solving Pair: "click" <-> "tronar"
-Solving Pair: "about to" <-> "a punto de"
-Solving Pair: "maybe" <-> "quizás"
-Solving Pair: "anywhere" <-> "en ninguna parte"
-Solving Pair: "what is your name?" <-> "cómo te llamas"
-Solving Pair: "peanut" <-> "maní"
-Solving Pair: "negative" <-> "negativo"
-Solving Pair: "tuna" <-> "atún"
-Solving Pair: "to wait" <-> "esperar"
-Solving Pair: "to camp" <-> "acampar"
-Solving Pair: "light" <-> "luz"
-Solving Pair: "midnight" <-> "medianoche"
-Solving Pair: "to turn off" <-> "apagar"
-Solving Pair: "exactly" <-> "justo"
-Solving Pair: "salty" <-> "salado"
-Solving Pair: "client" <-> "cliente"
-Solving Pair: "doctor" <-> "doctor"
-Solving Pair: "athlete" <-> "atleta"
-Solving Pair: "box" <-> "caja"
+Solving Pair: "bald" <-> "calvo"
+Solving Pair: "annual" <-> "anual"
+Solving Pair: "to act" <-> "actuar"
+Solving Pair: "table tennis" <-> "tenis de mesa"
+Solving Pair: "partner" <-> "pareja"
+Solving Pair: "horror" <-> "de terror"
+Solving Pair: "date" <-> "cita"
+Solving Pair: "wedding" <-> "boda"
+Solving Pair: "dish of the day" <-> "plato del día"
+Solving Pair: "unusual" <-> "extraordinario"
+Solving Pair: "to argue" <-> "discutir"
+Solving Pair: "cheap" <-> "barato"
+Solving Pair: "group" <-> "grupo"
+Solving Pair: "useful" <-> "útil"
+Solving Pair: "to be right" <-> "tener razón"
+Solving Pair: "to chat" <-> "charlar"
+Solving Pair: "ugly" <-> "feo"
+Solving Pair: "activity" <-> "actividad"
+Solving Pair: "chess" <-> "ajedrez"
+Solving Pair: "dancer" <-> "bailarín"
+Solving Pair: "to know" <-> "conocer"
 Solved 21 tokens.
 Challenge type: extendedMatch
-XP credited during session (50460 -> 50470). Session complete!
+XP credited during session (50470 -> 50480). Session complete!
 Session loop ended.
-Session end. Streak: 1299, XP: 50460, lastExtended: 2026-10-28
-Post-session streak: 1299, XP: 50470, lastExtended: 2026-10-28
+Session end. Streak: 1299, XP: 50470, lastExtended: 2026-10-28
+Post-session streak: 1299, XP: 50480, lastExtended: 2026-10-28
 ✅ Session credited 10 XP; streak complete for 2026-10-28.
 ```
