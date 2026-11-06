@@ -1,12 +1,12 @@
 # Streak Status
-Last run on: 2026-11-06 02:54:37 UTC
+Last run on: 2026-11-06 22:11:34 UTC
 
 ```
-trackedAt: 2026-11-06T02:54:34.752Z
+trackedAt: 2026-11-06T22:11:32.469Z
 verified: true
 reason: Session credited 10 XP; streak complete for 2026-11-06.
 streak: 1307 -> 1307 (delta 0)
-xp: 50766 -> 50776 (delta 10)
+xp: 50776 -> 50786 (delta 10)
 lastExtendedDate: 2026-11-06
 ```
 
@@ -21,69 +21,69 @@ lastExtendedDate: 2026-11-06
 > duolingo-bot@1.0.0 exec-script /home/runner/work/Duolingo-bot/Duolingo-bot
 > node --loader ts-node/esm --experimental-specifier-resolution=node src/practice.ts
 
-(node:2398) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+(node:2469) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
 --import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2398) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(node:2469) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
-[dotenv@17.2.3] injecting env (0) from .env -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
 Starting practice session...
 Navigating to Words lesson...
 Clicking Start button...
 Session data captured
 Idle iteration 25: url=https://www.duolingo.com/practice-hub/words/practice
+Idle iteration 50: url=https://www.duolingo.com/practice-hub/words/practice
 Challenge type: match
-Solving Pair: "huh" <-> "eh"
-Solving Pair: "any" <-> "algún"
-Solving Pair: "instruction" <-> "instrucción"
-Solving Pair: "mask" <-> "mascarilla"
-Solving Pair: "cold" <-> "resfriado"
+Solving Pair: "aspirin" <-> "aspirina"
+Solving Pair: "alcohol" <-> "alcohol"
+Solving Pair: "to smoke" <-> "fumar"
+Solving Pair: "illness" <-> "enfermedad"
+Solving Pair: "cough" <-> "tos"
 Solved 5 tokens.
 Challenge type: extendedListenMatch
-Solving Self-Match: "cold-challenge-tap-token"
-Solving Self-Match: "dead-challenge-tap-token"
-Solving Self-Match: "huh-challenge-tap-token"
-Solving Self-Match: "beer-challenge-tap-token"
-Solving Self-Match: "useful-challenge-tap-token"
-Solving Self-Match: "French-challenge-tap-token"
-Solving Self-Match: "mask-challenge-tap-token"
-Solving Self-Match: "seventy-challenge-tap-token"
-Solving Self-Match: "instruction-challenge-tap-token"
-Solving Self-Match: "any-challenge-tap-token"
-Solving Self-Match: "tail-challenge-tap-token"
-Solving Self-Match: "full-challenge-tap-token"
-Solving Self-Match: "stand-challenge-tap-token"
+Solving Self-Match: "field-challenge-tap-token"
+Solving Self-Match: "alcohol-challenge-tap-token"
+Solving Self-Match: "smoke-challenge-tap-token to"
+Solving Self-Match: "symptom-challenge-tap-token"
+Solving Self-Match: "(to) set-challenge-tap-token"
+Solving Self-Match: "to walk-challenge-tap-token"
+Solving Self-Match: "illness-challenge-tap-token"
+Solving Self-Match: "cough-challenge-tap-token"
+Solving Self-Match: "aspirin-challenge-tap-token"
+Solving Self-Match: "behind-challenge-tap-token"
+Solving Self-Match: "blond-challenge-tap-token"
+Solving Self-Match: "which-challenge-tap-token"
+Solving Self-Match: "routine-challenge-tap-token"
 No active tokens found
 Solved 13 tokens.
 Challenge type: extendedMatch
-Solving Pair: "useful" <-> "útil"
-Solving Pair: "beer" <-> "cerveza"
-Solving Pair: "tail" <-> "cola"
-Solving Pair: "tuna" <-> "atún"
-Solving Pair: "seventy" <-> "setenta"
-Solving Pair: "stand" <-> "renunciar"
-Solving Pair: "grapefruit" <-> "toronja"
-Solving Pair: "divorced" <-> "divorciado"
-Solving Pair: "full" <-> "lleno"
-Solving Pair: "how strange" <-> "qué raro"
-Solving Pair: "American" <-> "estadounidense"
-Solving Pair: "French" <-> "francés"
-Solving Pair: "huh" <-> "eh"
-Solving Pair: "any" <-> "algún"
-Solving Pair: "instruction" <-> "instrucción"
-Solving Pair: "Chinese" <-> "chino"
-Solving Pair: "dead" <-> "muerto"
-Solving Pair: "mosque" <-> "mezquita"
-Solving Pair: "mask" <-> "mascarilla"
-Solving Pair: "cold" <-> "resfriado"
-Solving Pair: "border" <-> "frontera"
+Solving Pair: "alcohol" <-> "alcohol"
+Solving Pair: "field" <-> "cancha"
+Solving Pair: "to walk" <-> "pasear"
+Solving Pair: "(to) set" <-> "poner"
+Solving Pair: "to smoke" <-> "fumar"
+Solving Pair: "murderer" <-> "asesino"
+Solving Pair: "illness" <-> "enfermedad"
+Solving Pair: "bill" <-> "billete"
+Solving Pair: "cough" <-> "tos"
+Solving Pair: "throw it to me" <-> "tírame"
+Solving Pair: "introverted" <-> "introvertido"
+Solving Pair: "blond" <-> "rubio"
+Solving Pair: "which" <-> "cuál"
+Solving Pair: "chubby" <-> "redondo"
+Solving Pair: "shampoo" <-> "champú"
+Solving Pair: "single" <-> "soltero"
+Solving Pair: "routine" <-> "rutina"
+Solving Pair: "aspirin" <-> "aspirina"
+Solving Pair: "symptom" <-> "síntoma"
+Solving Pair: "behind" <-> "detrás de"
+Solving Pair: "hat" <-> "sombrero"
 Solved 21 tokens.
-Challenge type: extendedMatch
-XP credited during session (50766 -> 50776). Session complete!
+XP credited during session (50776 -> 50786). Session complete!
 Session loop ended.
-Session end. Streak: 1307, XP: 50766, lastExtended: 2026-11-06
-Post-session streak: 1307, XP: 50776, lastExtended: 2026-11-06
+Session end. Streak: 1307, XP: 50776, lastExtended: 2026-11-06
+Post-session streak: 1307, XP: 50786, lastExtended: 2026-11-06
 ✅ Session credited 10 XP; streak complete for 2026-11-06.
 ```
