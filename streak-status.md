@@ -1,13 +1,13 @@
 # Streak Status
-Last run on: 2026-11-07 20:59:32 UTC
+Last run on: 2026-11-08 00:54:38 UTC
 
 ```
-trackedAt: 2026-11-07T20:59:29.975Z
+trackedAt: 2026-11-08T00:54:36.459Z
 verified: true
-reason: Session credited 10 XP; streak complete for 2026-11-07.
-streak: 1308 -> 1308 (delta 0)
-xp: 50816 -> 50826 (delta 10)
-lastExtendedDate: 2026-11-07
+reason: Session credited 10 XP; streak complete for 2026-11-08.
+streak: 1308 -> 1309 (delta 1)
+xp: 50826 -> 50836 (delta 10)
+lastExtendedDate: 2026-11-08
 ```
 
 ## Practice output tail
@@ -21,69 +21,67 @@ lastExtendedDate: 2026-11-07
 > duolingo-bot@1.0.0 exec-script /home/runner/work/Duolingo-bot/Duolingo-bot
 > node --loader ts-node/esm --experimental-specifier-resolution=node src/practice.ts
 
-(node:2333) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+(node:2533) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
 --import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2333) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(node:2533) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  override existing env vars with { override: true }
 Starting practice session...
 Navigating to Words lesson...
 Clicking Start button...
 Session data captured
-Idle iteration 25: url=https://www.duolingo.com/practice-hub/words/practice
 Challenge type: match
-Solving Pair: "skateboard" <-> "patineta"
-Solving Pair: "noon" <-> "al mediodía"
-Solving Pair: "paper" <-> "papel"
-Solving Pair: "toy" <-> "juguete"
-Solving Pair: "to invite" <-> "invitar a"
+Solving Pair: "to bring" <-> "traer"
+Solving Pair: "washing machine" <-> "lavadora"
+Solving Pair: "uniform" <-> "uniforme"
+Solving Pair: "to tidy up" <-> "ordenar"
+Solving Pair: "notebook" <-> "cuaderno"
 Solved 5 tokens.
 Challenge type: extendedListenMatch
-Solving Self-Match: "celebrate-challenge-tap-token"
-Solving Self-Match: "routine-challenge-tap-token"
-Solving Self-Match: "sincere-challenge-tap-token"
-Solving Self-Match: "style-challenge-tap-token"
-Solving Self-Match: "(to) lie-challenge-tap-token"
-Solving Self-Match: "noon-challenge-tap-token"
-Solving Self-Match: "toy-challenge-tap-token"
-Solving Self-Match: "skateboard-challenge-tap-token"
-Solving Self-Match: "paper-challenge-tap-token"
-Solving Self-Match: "pullover-challenge-tap-token"
-Solving Self-Match: "invite-challenge-tap-token to"
+Solving Self-Match: "uniform-challenge-tap-token"
+Solving Self-Match: "previous-challenge-tap-token"
+Solving Self-Match: "menu-challenge-tap-token"
+Solving Self-Match: "iron-challenge-tap-token to"
+Solving Self-Match: "group-challenge-tap-token"
+Solving Self-Match: "notebook-challenge-tap-token"
+Solving Self-Match: "carpet-challenge-tap-token"
+Solving Self-Match: "syllabus-challenge-tap-token"
+Solving Self-Match: "tidy to up-challenge-tap-token"
 Solving Self-Match: "gram-challenge-tap-token"
-Solving Self-Match: "copy machine-challenge-tap-token"
+Solving Self-Match: "machine-challenge-tap-token washing"
+Solving Self-Match: "bring-challenge-tap-token to"
+Solving Self-Match: "system-challenge-tap-token"
 No active tokens found
 Solved 13 tokens.
 Challenge type: extendedMatch
-Solving Pair: "skateboard" <-> "patineta"
-Solving Pair: "to drink" <-> "beber"
-Solving Pair: "slipper" <-> "pantufla"
-Solving Pair: "(to) lie" <-> "mentir"
-Solving Pair: "extremely interesting" <-> "interesantísimo"
-Solving Pair: "Thursday" <-> "jueves"
-Solving Pair: "romantic" <-> "romántico"
-Solving Pair: "celebrate" <-> "celebren"
-Solving Pair: "to invite" <-> "invitar a"
-Solving Pair: "to catch" <-> "atrapar"
+Solving Pair: "carpet" <-> "alfombra"
+Solving Pair: "to iron" <-> "planchar"
+Solving Pair: "salty" <-> "salado"
 Solving Pair: "gram" <-> "gramo"
-Solving Pair: "copy machine" <-> "fotocopiadora"
-Solving Pair: "style" <-> "estilo"
-Solving Pair: "toy" <-> "juguete"
-Solving Pair: "sincere" <-> "sincero"
-Solving Pair: "square" <-> "saldo"
-Solving Pair: "noon" <-> "al mediodía"
-Solving Pair: "pullover" <-> "pulóver"
-Solving Pair: "paper" <-> "papel"
-Solving Pair: "let's" <-> "usar"
-Solving Pair: "routine" <-> "rutina"
+Solving Pair: "washing machine" <-> "lavadora"
+Solving Pair: "stove" <-> "estufa"
+Solving Pair: "uniform" <-> "uniforme"
+Solving Pair: "reviews" <-> "repaso"
+Solving Pair: "(I) was" <-> "estuve"
+Solving Pair: "to tidy up" <-> "ordenar"
+Solving Pair: "notebook" <-> "cuaderno"
+Solving Pair: "to bring" <-> "traer"
+Solving Pair: "previous" <-> "anterior"
+Solving Pair: "system" <-> "sistema"
+Solving Pair: "menu" <-> "menú"
+Solving Pair: "group" <-> "grupo"
+Solving Pair: "attend" <-> "ir a"
+Solving Pair: "local" <-> "local"
+Solving Pair: "syllabus" <-> "programa"
+Solving Pair: "inform" <-> "avisar"
+Solving Pair: "serving" <-> "servir"
 Solved 21 tokens.
-Challenge type: extendedMatch
-XP credited during session (50816 -> 50826). Session complete!
+XP credited during session (50826 -> 50836). Session complete!
 Session loop ended.
-Session end. Streak: 1308, XP: 50816, lastExtended: 2026-11-07
-Post-session streak: 1308, XP: 50826, lastExtended: 2026-11-07
-✅ Session credited 10 XP; streak complete for 2026-11-07.
+Session end. Streak: 1308, XP: 50826, lastExtended: 2026-11-07
+Post-session streak: 1309, XP: 50836, lastExtended: 2026-11-08
+✅ Session credited 10 XP; streak complete for 2026-11-08.
 ```
