@@ -1,13 +1,13 @@
 # Streak Status
-Last run on: 2026-11-14 21:35:53 UTC
+Last run on: 2026-11-15 01:17:13 UTC
 
 ```
-trackedAt: 2026-11-14T21:35:51.911Z
+trackedAt: 2026-11-15T01:17:11.562Z
 verified: true
-reason: Session credited 10 XP; streak complete for 2026-11-14.
-streak: 1315 -> 1315 (delta 0)
-xp: 51076 -> 51086 (delta 10)
-lastExtendedDate: 2026-11-14
+reason: Session credited 10 XP; streak complete for 2026-11-15.
+streak: 1315 -> 1316 (delta 1)
+xp: 51086 -> 51096 (delta 10)
+lastExtendedDate: 2026-11-15
 ```
 
 ## Practice output tail
@@ -21,14 +21,14 @@ lastExtendedDate: 2026-11-14
 > duolingo-bot@1.0.0 exec-script /home/runner/work/Duolingo-bot/Duolingo-bot
 > node --loader ts-node/esm --experimental-specifier-resolution=node src/practice.ts
 
-(node:2548) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+(node:2549) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
 --import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2548) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(node:2549) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
 Starting practice session...
 Navigating to Words lesson...
 Clicking Start button...
@@ -36,54 +36,54 @@ Session data captured
 Idle iteration 25: url=https://www.duolingo.com/practice-hub/words/practice
 Idle iteration 50: url=https://www.duolingo.com/practice-hub/words/practice
 Challenge type: match
-Solving Pair: "those" <-> "esos"
-Solving Pair: "fountain" <-> "fuente"
-Solving Pair: "these" <-> "estos"
-Solving Pair: "lost" <-> "perdido"
-Solving Pair: "wait" <-> "espera"
+Solving Pair: "cathedral" <-> "catedral"
+Solving Pair: "avenue" <-> "avenida"
+Solving Pair: "confused" <-> "confundido"
+Solving Pair: "there" <-> "ahí"
+Solving Pair: "at the end of" <-> "al final de"
 Solved 5 tokens.
 Challenge type: extendedListenMatch
-Solving Self-Match: "transfer-challenge-tap-token"
-Solving Self-Match: "June-challenge-tap-token"
-Solving Self-Match: "harbor-challenge-tap-token"
-Solving Self-Match: "traffic-challenge-tap-token"
-Solving Self-Match: "those-challenge-tap-token"
-Solving Self-Match: "before-challenge-tap-token"
-Solving Self-Match: "wait-challenge-tap-token"
-Solving Self-Match: "lost-challenge-tap-token"
-Solving Self-Match: "these-challenge-tap-token"
-Solving Self-Match: "monster-challenge-tap-token"
-Solving Self-Match: "fountain-challenge-tap-token"
-Solving Self-Match: "virus-challenge-tap-token"
-Solving Self-Match: "peace-challenge-tap-token"
+Solving Self-Match: "cathedral-challenge-tap-token"
+Solving Self-Match: "there-challenge-tap-token"
+Solving Self-Match: "at end of-challenge-tap-token the"
+Solving Self-Match: "hold-challenge-tap-token"
+Solving Self-Match: "him-challenge-tap-token tell"
+Solving Self-Match: "package-challenge-tap-token"
+Solving Self-Match: "like-challenge-tap-token"
+Solving Self-Match: "confused-challenge-tap-token"
+Solving Self-Match: "stew-challenge-tap-token"
+Solving Self-Match: "hurry-challenge-tap-token"
+Solving Self-Match: "avenue-challenge-tap-token"
+Solving Self-Match: "caught-challenge-tap-token"
+Solving Self-Match: "chat-challenge-tap-token to"
 No active tokens found
 Solved 13 tokens.
 Challenge type: extendedMatch
-Solving Pair: "fountain" <-> "fuente"
-Solving Pair: "half" <-> "medio"
-Solving Pair: "peace" <-> "paz"
-Solving Pair: "before" <-> "antes"
-Solving Pair: "used" <-> "usado"
-Solving Pair: "head" <-> "cabeza"
-Solving Pair: "how much" <-> "cuánta"
-Solving Pair: "monster" <-> "monstruo"
-Solving Pair: "harbor" <-> "puerto"
-Solving Pair: "June" <-> "junio"
-Solving Pair: "lost" <-> "perdido"
-Solving Pair: "fifteen" <-> "quince"
-Solving Pair: "shorts" <-> "shorts"
-Solving Pair: "whose" <-> "de quién"
-Solving Pair: "wait" <-> "espera"
-Solving Pair: "these" <-> "estos"
-Solving Pair: "virus" <-> "virus"
-Solving Pair: "traffic" <-> "tránsito"
-Solving Pair: "those" <-> "esos"
-Solving Pair: "transfer" <-> "transferencia"
-Solving Pair: "(they) are seeing" <-> "ven"
+Solving Pair: "there" <-> "ahí"
+Solving Pair: "to know" <-> "saber"
+Solving Pair: "to have" <-> "tener"
+Solving Pair: "dollar" <-> "dólar"
+Solving Pair: "savings" <-> "ahorros"
+Solving Pair: "business" <-> "local"
+Solving Pair: "avenue" <-> "avenida"
+Solving Pair: "hold" <-> "durar"
+Solving Pair: "tell him" <-> "dile"
+Solving Pair: "alarm clock" <-> "despertador"
+Solving Pair: "to chat" <-> "charlar"
+Solving Pair: "law" <-> "derecho"
+Solving Pair: "confused" <-> "confundido"
+Solving Pair: "at the end of" <-> "al final de"
+Solving Pair: "cathedral" <-> "catedral"
+Solving Pair: "win" <-> "triunfo"
+Solving Pair: "package" <-> "paquete"
+Solving Pair: "stew" <-> "cocido"
+Solving Pair: "caught" <-> "agarrar"
+Solving Pair: "hurry" <-> "apurarse"
+Solving Pair: "like" <-> "les gusta"
 Solved 21 tokens.
-XP credited during session (51076 -> 51086). Session complete!
+XP credited during session (51086 -> 51096). Session complete!
 Session loop ended.
-Session end. Streak: 1315, XP: 51076, lastExtended: 2026-11-14
-Post-session streak: 1315, XP: 51086, lastExtended: 2026-11-14
-✅ Session credited 10 XP; streak complete for 2026-11-14.
+Session end. Streak: 1315, XP: 51086, lastExtended: 2026-11-14
+Post-session streak: 1316, XP: 51096, lastExtended: 2026-11-15
+✅ Session credited 10 XP; streak complete for 2026-11-15.
 ```
