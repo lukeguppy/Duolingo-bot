@@ -1,12 +1,12 @@
 # Streak Status
-Last run on: 2026-11-19 02:47:24 UTC
+Last run on: 2026-11-19 03:17:11 UTC
 
 ```
-trackedAt: 2026-11-19T02:47:22.426Z
+trackedAt: 2026-11-19T03:17:08.689Z
 verified: true
 reason: Session credited 10 XP; streak complete for 2026-11-19.
-streak: 1319 -> 1320 (delta 1)
-xp: 51226 -> 51236 (delta 10)
+streak: 1320 -> 1320 (delta 0)
+xp: 51236 -> 51246 (delta 10)
 lastExtendedDate: 2026-11-19
 ```
 
@@ -21,70 +21,68 @@ lastExtendedDate: 2026-11-19
 > duolingo-bot@1.0.0 exec-script /home/runner/work/Duolingo-bot/Duolingo-bot
 > node --loader ts-node/esm --experimental-specifier-resolution=node src/practice.ts
 
-(node:2477) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+(node:2366) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
 --import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2477) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(node:2366) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
 Starting practice session...
 Navigating to Words lesson...
 Clicking Start button...
 Session data captured
-Idle iteration 25: url=https://www.duolingo.com/practice-hub/words/practice
-Idle iteration 50: url=https://www.duolingo.com/practice-hub/words/practice
 Challenge type: match
-Solving Pair: "schedule" <-> "horario"
-Solving Pair: "take classes" <-> "tomar clases"
-Solving Pair: "gymnastics" <-> "gimnasia"
-Solving Pair: "useful" <-> "útil"
-Solving Pair: "to open" <-> "abrir"
+Solving Pair: "outside" <-> "fuera"
+Solving Pair: "list" <-> "lista"
+Solving Pair: "game" <-> "juego"
+Solving Pair: "night" <-> "noche"
+Solving Pair: "sweet" <-> "dulce"
 Solved 5 tokens.
 Challenge type: extendedListenMatch
-Solving Self-Match: "classes-challenge-tap-token take"
-Solving Self-Match: "step-challenge-tap-token"
-Solving Self-Match: "dead-challenge-tap-token"
-Solving Self-Match: "gymnastics-challenge-tap-token"
-Solving Self-Match: "quality-challenge-tap-token"
-Solving Self-Match: "schedule-challenge-tap-token"
-Solving Self-Match: "microwave-challenge-tap-token"
-Solving Self-Match: "useful-challenge-tap-token"
-Solving Self-Match: "open-challenge-tap-token to"
-Solving Self-Match: "brave-challenge-tap-token"
-Solving Self-Match: "row-challenge-tap-token"
-Solving Self-Match: "(to) create-challenge-tap-token"
-Solving Self-Match: "parsley-challenge-tap-token"
+Solving Self-Match: "ex-challenge-tap-token"
+Solving Self-Match: "game-challenge-tap-token"
+Solving Self-Match: "list-challenge-tap-token"
+Solving Self-Match: "Haitian-challenge-tap-token"
+Solving Self-Match: "clinic-challenge-tap-token"
+Solving Self-Match: "outside-challenge-tap-token"
+Solving Self-Match: "contract-challenge-tap-token"
+Solving Self-Match: "train-challenge-tap-token"
+Solving Self-Match: "sweet-challenge-tap-token"
+Solving Self-Match: "night-challenge-tap-token"
+Solving Self-Match: "moon-challenge-tap-token"
+Solving Self-Match: "so-challenge-tap-token"
+Solving Self-Match: "(she) thought-challenge-tap-token"
 No active tokens found
 Solved 13 tokens.
 Challenge type: extendedMatch
-Solving Pair: "schedule" <-> "horario"
-Solving Pair: "gymnastics" <-> "gimnasia"
-Solving Pair: "useful" <-> "útil"
-Solving Pair: "to open" <-> "abrir"
-Solving Pair: "(to) create" <-> "crear"
-Solving Pair: "casual" <-> "informal"
-Solving Pair: "row" <-> "fila"
-Solving Pair: "dead" <-> "desconectado"
-Solving Pair: "take classes" <-> "tomar clases"
-Solving Pair: "quality" <-> "calidad"
-Solving Pair: "fever" <-> "fiebre"
-Solving Pair: "something" <-> "algo"
-Solving Pair: "parsley" <-> "perejil"
-Solving Pair: "microwave" <-> "microondas"
-Solving Pair: "ugh" <-> "bah"
-Solving Pair: "written" <-> "escrito"
-Solving Pair: "to chat" <-> "chatear"
-Solving Pair: "brave" <-> "valiente"
-Solving Pair: "step" <-> "paso"
-Solving Pair: "mystery" <-> "misterio"
-Solving Pair: "shoe" <-> "zapato"
+Solving Pair: "clinic" <-> "clínica"
+Solving Pair: "tennis" <-> "tenis"
+Solving Pair: "rent" <-> "alquiler"
+Solving Pair: "to teach" <-> "enseñar"
+Solving Pair: "so" <-> "tan"
+Solving Pair: "twenty-two" <-> "veintidós"
+Solving Pair: "list" <-> "lista"
+Solving Pair: "desert" <-> "desierto"
+Solving Pair: "train" <-> "tren"
+Solving Pair: "sweet" <-> "dulce"
+Solving Pair: "night" <-> "noche"
+Solving Pair: "by train" <-> "en tren"
+Solving Pair: "Haitian" <-> "haitiano"
+Solving Pair: "(she) thought" <-> "creyó"
+Solving Pair: "accent" <-> "acento"
+Solving Pair: "moon" <-> "luna"
+Solving Pair: "baggy" <-> "ancho"
+Solving Pair: "contract" <-> "contrato"
+Solving Pair: "outside" <-> "fuera"
+Solving Pair: "game" <-> "juego"
+Solving Pair: "ex" <-> "ex"
 Solved 21 tokens.
 Challenge type: extendedMatch
-XP credited during session (51226 -> 51236). Session complete!
+XP credited during session (51236 -> 51246). Session complete!
 Session loop ended.
-Session end. Streak: 1319, XP: 51226, lastExtended: 2026-11-18
-Post-session streak: 1320, XP: 51236, lastExtended: 2026-11-19
+Session end. Streak: 1320, XP: 51236, lastExtended: 2026-11-19
+Post-session streak: 1320, XP: 51246, lastExtended: 2026-11-19
 ✅ Session credited 10 XP; streak complete for 2026-11-19.
 ```
