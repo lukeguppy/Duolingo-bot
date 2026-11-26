@@ -1,7 +1,14 @@
 # Streak Status
-Last run on: 2026-11-26 01:03:04 UTC
+Last run on: 2026-11-26 03:45:47 UTC
 
-Status: FAILED - no verification result produced
+```
+trackedAt: 2026-11-26T03:45:46.200Z
+verified: true
+reason: Session credited 10 XP; streak complete for 2026-11-26.
+streak: 1326 -> 1327 (delta 1)
+xp: 51486 -> 51496 (delta 10)
+lastExtendedDate: 2026-11-26
+```
 
 ## Practice output tail
 
@@ -19,27 +26,62 @@ Status: FAILED - no verification result produced
 (Use `node --trace-warnings ...` to show where the warning was created)
 (node:2366) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
-[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
-[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
 Starting practice session...
 Navigating to Words lesson...
-Direct Words page did not show Start/Review. Falling back to Practice Hub UI...
-Practice hub collections: [
-  'SpeakImprove your speaking skills with these phrases',
-  'ListenBoost your listening skills with an audio-only session',
-  'MistakesStart a personalized lesson to practice your mistakes30+',
-  'WordsReview your Spanish vocabulary at any time',
-  'StoriesReread a story to review words in context'
-]
-An error occurred: locator.waitFor: Timeout 10000ms exceeded.
-Call log:
-  - waiting for locator('[data-test="practice-hub-collection-button"]').filter({ hasText: /^Words\b/i }).first() to be visible
-
-    at startWordsLesson (/home/runner/work/Duolingo-bot/Duolingo-bot/src/utils/navigation.ts:30:27)
-    at async file:///home/runner/work/Duolingo-bot/Duolingo-bot/src/practice.ts:55:29 {
-  name: 'TimeoutError'
-}
- ELIFECYCLE  Command failed with exit code 1.
- ELIFECYCLE  Command failed with exit code 1.
+Clicking Start button...
+Session data captured
+Challenge type: match
+Solving Pair: "eight" <-> "ocho"
+Solving Pair: "clean" <-> "limpio"
+Solving Pair: "to shower" <-> "ducharse"
+Solving Pair: "to return" <-> "regresar"
+Solving Pair: "of course" <-> "por supuesto"
+Solved 5 tokens.
+Challenge type: extendedListenMatch
+Solving Self-Match: "recovery-challenge-tap-token"
+Solving Self-Match: "course-challenge-tap-token of"
+Solving Self-Match: "nice-challenge-tap-token"
+Solving Self-Match: "standing-challenge-tap-token"
+Solving Self-Match: "softly-challenge-tap-token"
+Solving Self-Match: "clean-challenge-tap-token"
+Solving Self-Match: "eight-challenge-tap-token"
+Solving Self-Match: "ant-challenge-tap-token"
+Solving Self-Match: "moon-challenge-tap-token"
+Solving Self-Match: "shower-challenge-tap-token to"
+Solving Self-Match: "egg-challenge-tap-token"
+Solving Self-Match: "return-challenge-tap-token to"
+Solving Self-Match: "worlds-challenge-tap-token"
+No active tokens found
+Solved 13 tokens.
+Challenge type: extendedMatch
+Solving Pair: "of course" <-> "por supuesto"
+Solving Pair: "cap" <-> "tapa"
+Solving Pair: "place" <-> "lugar"
+Solving Pair: "magician" <-> "mago"
+Solving Pair: "clean" <-> "limpio"
+Solving Pair: "temple" <-> "templo"
+Solving Pair: "egg" <-> "huevo"
+Solving Pair: "sixty" <-> "sesenta"
+Solving Pair: "ant" <-> "hormiga"
+Solving Pair: "to return" <-> "regresar"
+Solving Pair: "standing" <-> "de pie"
+Solving Pair: "eight" <-> "ocho"
+Solving Pair: "recovery" <-> "recuperación"
+Solving Pair: "worlds" <-> "mundos"
+Solving Pair: "object" <-> "objeto"
+Solving Pair: "millionaire" <-> "millonario"
+Solving Pair: "softly" <-> "suavemente"
+Solving Pair: "to meet" <-> "reunirse"
+Solving Pair: "to shower" <-> "ducharse"
+Solving Pair: "moon" <-> "luna"
+Solving Pair: "nice" <-> "lindo"
+Solved 21 tokens.
+XP credited during session (51486 -> 51496). Session complete!
+Session loop ended.
+Session end. Streak: 1326, XP: 51486, lastExtended: 2026-11-25
+Post-session streak: 1327, XP: 51496, lastExtended: 2026-11-26
+✅ Session credited 10 XP; streak complete for 2026-11-26.
 ```
