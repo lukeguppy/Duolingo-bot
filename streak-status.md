@@ -1,13 +1,13 @@
 # Streak Status
-Last run on: 2026-11-27 04:37:45 UTC
+Last run on: 2026-11-28 00:36:04 UTC
 
 ```
-trackedAt: 2026-11-27T04:37:42.678Z
+trackedAt: 2026-11-28T00:36:02.628Z
 verified: true
-reason: Session credited 10 XP; streak complete for 2026-11-27.
-streak: 1328 -> 1328 (delta 0)
-xp: 51546 -> 51556 (delta 10)
-lastExtendedDate: 2026-11-27
+reason: Session credited 10 XP; streak complete for 2026-11-28.
+streak: 1328 -> 1329 (delta 1)
+xp: 51556 -> 51566 (delta 10)
+lastExtendedDate: 2026-11-28
 ```
 
 ## Practice output tail
@@ -21,68 +21,67 @@ lastExtendedDate: 2026-11-27
 > duolingo-bot@1.0.0 exec-script /home/runner/work/Duolingo-bot/Duolingo-bot
 > node --loader ts-node/esm --experimental-specifier-resolution=node src/practice.ts
 
-(node:2368) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+(node:2349) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
 --import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("ts-node/esm", pathToFileURL("./"));'
 (Use `node --trace-warnings ...` to show where the warning was created)
-(node:2368) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
+(node:2349) [DEP0180] DeprecationWarning: fs.Stats constructor is deprecated.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  suppress all logs with { quiet: true }
 [dotenv@17.2.3] injecting env (0) from .env -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
-[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
+[dotenv@17.2.3] injecting env (0) from .env -- tip: ⚙️  write to custom object with { processEnv: myObject }
 Starting practice session...
 Navigating to Words lesson...
 Clicking Start button...
 Session data captured
 Challenge type: match
-Solving Pair: "seven" <-> "siete"
-Solving Pair: "every" <-> "cada"
-Solving Pair: "blog" <-> "blog"
-Solving Pair: "to get up" <-> "levantarse"
-Solving Pair: "half past" <-> "y media"
+Solving Pair: "dangerous" <-> "peligroso"
+Solving Pair: "sea" <-> "mar"
+Solving Pair: "forest" <-> "bosque"
+Solving Pair: "desert" <-> "desierto"
+Solving Pair: "snake" <-> "serpiente"
 Solved 5 tokens.
 Challenge type: extendedListenMatch
-Solving Self-Match: "goal-challenge-tap-token"
-Solving Self-Match: "half past-challenge-tap-token"
-Solving Self-Match: "recent-challenge-tap-token"
-Solving Self-Match: "get to up-challenge-tap-token"
-Solving Self-Match: "blog-challenge-tap-token"
-Solving Self-Match: "alone-challenge-tap-token"
-Solving Self-Match: "detergent-challenge-tap-token"
+Solving Self-Match: "embassy-challenge-tap-token"
+Solving Self-Match: "sea-challenge-tap-token"
+Solving Self-Match: "snake-challenge-tap-token"
+Solving Self-Match: "this-challenge-tap-token"
 Solving Self-Match: "bay-challenge-tap-token"
-Solving Self-Match: "seven-challenge-tap-token"
-Solving Self-Match: "every-challenge-tap-token"
-Solving Self-Match: "bone-challenge-tap-token"
-Solving Self-Match: "holiday-challenge-tap-token"
-Solving Self-Match: "frequently-challenge-tap-token"
+Solving Self-Match: "dangerous-challenge-tap-token"
+Solving Self-Match: "story-challenge-tap-token"
+Solving Self-Match: "desert-challenge-tap-token"
+Solving Self-Match: "French-challenge-tap-token"
+Solving Self-Match: "spring-challenge-tap-token"
+Solving Self-Match: "forest-challenge-tap-token"
+Solving Self-Match: "skate-challenge-tap-token to"
+Solving Self-Match: "juice-challenge-tap-token"
 No active tokens found
 Solved 13 tokens.
 Challenge type: extendedMatch
-Solving Pair: "blog" <-> "blog"
-Solving Pair: "league" <-> "liga"
-Solving Pair: "very" <-> "muy"
-Solving Pair: "cycling" <-> "ciclismo"
-Solving Pair: "caught" <-> "entender"
-Solving Pair: "alone" <-> "solo"
-Solving Pair: "detergent" <-> "detergente"
-Solving Pair: "to get up" <-> "levantarse"
-Solving Pair: "enough" <-> "bastante"
-Solving Pair: "bone" <-> "hueso"
+Solving Pair: "It is urgent that" <-> "es urgente que"
+Solving Pair: "piñata" <-> "piñata"
+Solving Pair: "spring" <-> "primavera"
+Solving Pair: "this" <-> "esto"
+Solving Pair: "to skate" <-> "patinar"
+Solving Pair: "cousin" <-> "primo"
+Solving Pair: "accent" <-> "acento"
+Solving Pair: "forest" <-> "bosque"
+Solving Pair: "desert" <-> "desierto"
+Solving Pair: "embassy" <-> "embajada"
+Solving Pair: "athletic" <-> "atlético"
+Solving Pair: "sea" <-> "mar"
+Solving Pair: "to snow" <-> "nevar"
+Solving Pair: "snake" <-> "serpiente"
+Solving Pair: "dangerous" <-> "peligroso"
+Solving Pair: "through" <-> "por la"
+Solving Pair: "juice" <-> "zumo"
+Solving Pair: "story" <-> "cuento"
+Solving Pair: "district" <-> "distrito"
 Solving Pair: "bay" <-> "bahía"
-Solving Pair: "antibiotic" <-> "antibiótico"
-Solving Pair: "cheerful" <-> "alegre"
-Solving Pair: "goal" <-> "gol"
-Solving Pair: "every" <-> "cada"
-Solving Pair: "recent" <-> "reciente"
-Solving Pair: "hair" <-> "pelo"
-Solving Pair: "half past" <-> "y media"
-Solving Pair: "seven" <-> "siete"
-Solving Pair: "frequently" <-> "frecuentemente"
-Solving Pair: "holiday" <-> "feriado"
+Solving Pair: "French" <-> "francés"
 Solved 21 tokens.
-Challenge type: extendedMatch
-XP credited during session (51546 -> 51556). Session complete!
+XP credited during session (51556 -> 51566). Session complete!
 Session loop ended.
-Session end. Streak: 1328, XP: 51546, lastExtended: 2026-11-27
-Post-session streak: 1328, XP: 51556, lastExtended: 2026-11-27
-✅ Session credited 10 XP; streak complete for 2026-11-27.
+Session end. Streak: 1328, XP: 51556, lastExtended: 2026-11-27
+Post-session streak: 1329, XP: 51566, lastExtended: 2026-11-28
+✅ Session credited 10 XP; streak complete for 2026-11-28.
 ```
